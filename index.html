@@ -1,4 +1,16 @@
-<!-- CONCEPTLY INTRO SCREEN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conceptly</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- INTRO SCREEN -->
 <div id="intro">
   <div class="intro-content">
     <h1>Conceptly</h1>
@@ -10,6 +22,41 @@
       <span>Content ideas</span>
     </div>
 
-    <p class="intro-credit">Powered by Jarvis · Built by Jeff</p>
+    <p class="intro-credit">Powered by AI · Built by Jeff</p>
   </div>
 </div>
+
+<!-- APP -->
+<div class="app">
+
+  <header class="top-bar">
+    <div class="title">Conceptly</div>
+    <div class="subtitle">Built by Jeff</div>
+  </header>
+
+  <main class="main">
+    <h2>Generate an idea</h2>
+    <p class="desc">Choose a category and let Conceptly do the thinking.</p>
+
+    <div class="card">
+      <label>Idea Type</label>
+      <select id="idea-type">
+        <option value="startup">Startup Idea</option>
+        <option value="app">App Idea</option>
+        <option value="content">Content Idea</option>
+      </select>
+
+      <label>Optional Context</label>
+      <textarea id="idea-context" placeholder="e.g. for students, for creators, for small businesses..."></textarea>
+
+      <button id="generate-btn">Generate Idea</button>
+    </div>
+
+    <div id="result" class="result hidden"></div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
