@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (intro) intro.remove();
   }, 6000);
 
-  const API_KEY = "";
+  const API_KEY = "94b7bae5-f8a3-49fc-9032-f878c39ce7e1";
   const API_URL = "https://api.sambanova.ai/v1/chat/completions";
 
   const typeSelect = document.getElementById("idea-type");
