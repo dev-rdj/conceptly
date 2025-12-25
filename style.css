@@ -1,0 +1,85 @@
+/* ===============================
+   CONCEPTLY INTRO SCREEN
+=============================== */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #0b141a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: introFadeOut 0.8s ease forwards;
+  animation-delay: 5.5s;
+}
+
+.intro-content {
+  text-align: center;
+  animation: introFadeIn 0.8s ease forwards;
+}
+
+.intro-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.intro-tagline {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* Animated use-cases */
+.intro-uses {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 18px;
+}
+
+.intro-uses span {
+  animation: fadeCycle 3s infinite;
+}
+
+.intro-uses span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.intro-uses span:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.intro-credit {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* Animations */
+@keyframes introFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeCycle {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
